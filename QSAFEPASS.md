@@ -11,3 +11,7 @@ be installed or shipped by QSafePass).
 
 Source review (QSafePass, 2026-10-14): ~770 lines of Rust/TS; no `unsafe`, no network, no process spawning, no file or
 environment access; the only OS calls are `KeyCredentialManager` and `UserConsentVerifier` from Microsoft's `windows` crate.
+
+Version mismatch in upstream (the concrete reason to build from source): `package.json` says `0.1.2`, `Cargo.toml` says `0.1.0`, and the removed
+`optionalDependencies` pointed at prebuilt binaries version `0.1.0`. Upstream's published 0.1.2 therefore installed binaries built from a different
+version than its own source - the binary could not be matched to the code it claims to be.
