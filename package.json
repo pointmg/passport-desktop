@@ -78,9 +78,5 @@
         "singleQuote": true,
         "tabWidth": 4,
         "trailingComma": "es5"
-    },
-    "optionalDependencies": {
-        "passport-desktop-win32-ia32-msvc": "0.1.0",
-        "passport-desktop-win32-x64-msvc": "0.1.0"
     }
 }
